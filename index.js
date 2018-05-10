@@ -49,6 +49,10 @@ const create = async() => {
   });
 
   const gitRemoteURL = getRemoteURL(); //=> git@github.com:vivaxy/create-n.git
+  if (!gitRemoteURL) {
+    console.log('Create failed with error git remote URL: '+ gitRemoteURL);
+    process.exit(1);
+  }
   const [_git, hostname_username_reponame_] = gitRemoteURL.split('@'); //=> github.com:vivaxy/create-n.git
   const [hostname_username_reponame, _] = hostname_username_reponame_.split('.git'); //=> github.com:vivaxy/create-n
   const [hostname, username_reponame] = hostname_username_reponame.split(':'); //=> github.com, vivaxy/create-n
