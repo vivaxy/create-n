@@ -20,5 +20,10 @@
   "homepage": "https://github.com/vivaxy/create-n#readme",
   "devDependencies": {
     "standard-version": "^4.3.0"
+  },
+  "dependencies": {
+    "execa": "^0.10.0",
+    "fs-extra": "^6.0.1",
+    "prompts": "^0.1.8"
   }
 }
