@@ -1,0 +1,24 @@
+{
+  "name": "create-n",
+  "version": "0.0.0",
+  "description": "Create Npm Package",
+  "bin": {
+    "create-n": "./index.js"
+  },
+  "scripts": {
+    "release": "standard-version && git push --follow-tags && npm publish --registry=https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vivaxy/create-n.git"
+  },
+  "author": "vivaxy <xyxuye2007@126.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vivaxy/create-n/issues"
+  },
+  "homepage": "https://github.com/vivaxy/create-n#readme",
+  "devDependencies": {
+    "standard-version": "^4.3.0"
+  }
+}
