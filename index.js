@@ -13,6 +13,8 @@ const getRemoteURL = require('./lib/git/getRemoteURL.js');
 
 const create = async() => {
 
+  console.log('Create-n version: ' + require('./package.json').version + '.');
+
   const files = await fse.readdir(process.cwd());
   if (files.length !== 0) {
     const { override } = await prompts([
