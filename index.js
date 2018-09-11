@@ -21,12 +21,14 @@ const createFiles = require('./lib/template/create-files.js');
   await generateFiles(params);
   await installDependencies();
   console.log('Create N success!');
+  process.exit(0);
 })().catch((ex) => {
   console.log(ex);
+  process.exit(1);
 });
 
 function logInfo() {
-  console.log('Create-n version: ' + require('./package.json').version + '.');
+  console.log('Create-n version: ' + require('./package.json').version);
 }
 
 async function checkDir() {
