@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.1"></a>
+## [0.3.1](https://github.com/vivaxy/create-n/compare/v0.3.0...v0.3.1) (2018-09-11)
+
+
+### Bug Fixes
+
+* :bug:Fix `package.json` `homepage` ([3288548](https://github.com/vivaxy/create-n/commit/3288548))
+* :bug:Fix created files with ejs ext ([7a05b9c](https://github.com/vivaxy/create-n/commit/7a05b9c))
+* :bug:Fix path is not defined ([bef76b8](https://github.com/vivaxy/create-n/commit/bef76b8))
+* **dot files:** :bug:Fix missing dot files ([4344928](https://github.com/vivaxy/create-n/commit/4344928))
+
+
+
 <a name="0.3.0"></a>
 # [0.3.0](https://github.com/vivaxy/create-n/compare/v0.2.3...v0.3.0) (2018-09-11)
 
