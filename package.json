@@ -22,7 +22,9 @@
     "standard-version": "^4.3.0"
   },
   "dependencies": {
+    "ejs": "^2.6.1",
     "execa": "^0.10.0",
+    "fast-glob": "^2.2.2",
     "fs-extra": "^6.0.1",
     "prompts": "^0.1.8"
   }

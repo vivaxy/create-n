@@ -1,0 +1,31 @@
+{
+  "name": "<%= name %>",
+  "version": "0.0.0",
+  "description": "Created by create-n",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava",
+    "coverage": "nyc npm run test && nyc report --reporter=html && nyc report --reporter=lcov > coverage.lcov",
+    "release:beta": "npm run coverage && standard-version --prerelease beta && npm publish --tag beta && git push --follow-tags",
+    "release": "npm run coverage && standard-version && npm publish && git push --follow-tags",
+    "precommit": "lint-staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://<%= hostname %>/<%= username %>/<%= reponame %>.git"
+  },
+  "author": "<%= username %> <<%= userEmail %>>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://<%= hostname %>/<%= username %>/<%= reponame %>/issues"
+  },
+  "homepage": "https://${hostname}/${username}/${reponame}#readme",
+  "devDependencies": {
+  },
+  "lint-staged": {
+    "**/**.{js,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
