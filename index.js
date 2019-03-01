@@ -89,9 +89,10 @@ async function getParams() {
 }
 
 async function generateFiles(params) {
-  const templateDir = path.join(__dirname, 'template');
-  await Promise.all([copyFiles({ templateDir }), createFiles({
-    templateDir,
+  const srcDir = path.join(__dirname, 'template');
+  await Promise.all([copyFiles({ srcDir, distDir: process.cwd() }), createFiles({
+    srcDir,
+    distDir: process.cwd(),
     params,
   })]);
 }
