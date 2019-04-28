@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.4.0"></a>
+# [0.4.0](https://github.com/vivaxy/create-n/compare/v0.3.4...v0.4.0) (2019-04-28)
+
+
+### Features
+
+* :sparkles:enforce using yarn ([a1918fd](https://github.com/vivaxy/create-n/commit/a1918fd))
+* **standard:** :sparkles:Add commitlint ([0fcac72](https://github.com/vivaxy/create-n/commit/0fcac72))
+* **yarn:** :sparkles:Limit package manager to yarn ([7a2b856](https://github.com/vivaxy/create-n/commit/7a2b856))
+
+
+
 <a name="0.3.4"></a>
 ## [0.3.4](https://github.com/vivaxy/create-n/compare/v0.3.3...v0.3.4) (2018-10-09)
 
