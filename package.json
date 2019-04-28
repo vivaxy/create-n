@@ -9,8 +9,7 @@
     "test": "ava",
     "coverage": "nyc npm run test && nyc report --reporter=html && nyc report --reporter=lcov > coverage.lcov",
     "release:beta": "npm run coverage && standard-version --prerelease beta && npm publish --tag beta && git push --follow-tags",
-    "release": "npm run coverage && standard-version && npm publish && git push --follow-tags",
-    "preinstall": "node -e \"if (process.env.npm_execpath.indexOf('yarn') === -1) { console.log('\u001b[31mPlease use yarn for installing\u001b[0m'); process.exit(1); }\""
+    "release": "npm run coverage && standard-version && npm publish && git push --follow-tags"
   },
   "repository": {
     "type": "git",
