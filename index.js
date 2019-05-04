@@ -100,7 +100,7 @@ async function getParams() {
 }
 
 async function generateFiles(params) {
-  console.log('> creating files ...');
+  console.log('> create files ...');
   const srcDir = path.join(__dirname, 'template');
   await Promise.all([
     copyFiles({ srcDir, distDir: process.cwd() }),

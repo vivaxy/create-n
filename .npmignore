@@ -6,3 +6,4 @@ node_modules
 coverage.lcov
 coverage
 **/__tests__/**
+!/template/__tests__/index.js
