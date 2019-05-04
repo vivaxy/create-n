@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.4.1"></a>
+## [0.4.1](https://github.com/vivaxy/create-n/compare/v0.4.0...v0.4.1) (2019-05-04)
+
+
+### Bug Fixes
+
+* :bug:Fix preinstall hook ([077f0bd](https://github.com/vivaxy/create-n/commit/077f0bd))
+
+
+
 <a name="0.4.0"></a>
 # [0.4.0](https://github.com/vivaxy/create-n/compare/v0.3.4...v0.4.0) (2019-04-28)
 
