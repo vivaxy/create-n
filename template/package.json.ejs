@@ -19,16 +19,6 @@
     "url": "https://<%= hostname %>/<%= username %>/<%= reponame %>/issues"
   },
   "homepage": "https://<%= hostname %>/<%= username %>/<%= reponame %>#readme",
-  "devDependencies": {
-    "@commitlint/cli": "^7.5.2",
-    "@commitlint/config-conventional": "^7.5.0",
-    "ava": "^0.25.0",
-    "husky": "^1.1.1",
-    "lint-staged": "^7.2.2",
-    "nyc": "^13.0.1",
-    "prettier": "^1.14.2",
-    "standard-version": "^4.4.0"
-  },
   "lint-staged": {
     "**/**.{js,json,md}": [
       "prettier --write",

@@ -14,7 +14,7 @@ const getUserEmail = require('./lib/git/get-user-email.js');
 const copyFiles = require('./lib/template/copy-files.js');
 const createFiles = require('./lib/template/create-files.js');
 
-(async() => {
+(async () => {
   logInfo();
   await checkDir();
   const params = await getParams();
@@ -34,19 +34,22 @@ function logInfo() {
 async function checkDir() {
   const files = await fse.readdir(process.cwd());
   if (files.length !== 0) {
-    const { override } = await prompts([
+    const { override } = await prompts(
+      [
+        {
+          type: 'confirm',
+          name: 'override',
+          message: 'Directory not empty, override?',
+          initial: true,
+        },
+      ],
       {
-        type: 'confirm',
-        name: 'override',
-        message: 'Directory not empty, override?',
-        initial: true,
-      },
-    ], {
-      onCancel: () => {
-        console.log('Create cancelled.');
-        process.exit(1);
-      },
-    });
+        onCancel: () => {
+          console.log('Create cancelled.');
+          process.exit(1);
+        },
+      }
+    );
     if (!override) {
       console.log('Create cancelled.');
       process.exit(0);
@@ -55,27 +58,35 @@ async function checkDir() {
 }
 
 async function getParams() {
-  const { name } = await prompts([
+  const { name } = await prompts(
+    [
+      {
+        type: 'text',
+        name: 'name',
+        message: 'package name',
+        initial: path.basename(process.cwd()),
+      },
+    ],
     {
-      type: 'text',
-      name: 'name',
-      message: 'package name',
-      initial: path.basename(process.cwd()),
-    },
-  ], {
-    onCancel: () => {
-      console.log('Create cancelled.');
-      process.exit(1);
-    },
-  });
+      onCancel: () => {
+        console.log('Create cancelled.');
+        process.exit(1);
+      },
+    }
+  );
 
-  const [gitRemoteURL, userEmail] = await Promise.all([getRemoteURL(), getUserEmail()]); // => git@github.com:vivaxy/create-n.git
+  const [gitRemoteURL, userEmail] = await Promise.all([
+    getRemoteURL(),
+    getUserEmail(),
+  ]); // => git@github.com:vivaxy/create-n.git
   if (!gitRemoteURL) {
     console.log('Create failed with error git remote URL: ' + gitRemoteURL);
     process.exit(1);
   }
   const [_git, hostname_username_reponame_] = gitRemoteURL.split('@'); // => github.com:vivaxy/create-n.git
-  const [hostname_username_reponame, _] = hostname_username_reponame_.split('.git'); // => github.com:vivaxy/create-n
+  const [hostname_username_reponame, _] = hostname_username_reponame_.split(
+    '.git'
+  ); // => github.com:vivaxy/create-n
   const [hostname, username_reponame] = hostname_username_reponame.split(':'); // => github.com, vivaxy/create-n
   const [username, reponame] = username_reponame.split('/'); // => vivaxy, create-n
   return {
@@ -89,14 +100,21 @@ async function getParams() {
 }
 
 async function generateFiles(params) {
+  console.log('> creating files ...');
   const srcDir = path.join(__dirname, 'template');
-  await Promise.all([copyFiles({ srcDir, distDir: process.cwd() }), createFiles({
-    srcDir,
-    distDir: process.cwd(),
-    params,
-  })]);
+  await Promise.all([
+    copyFiles({ srcDir, distDir: process.cwd() }),
+    createFiles({
+      srcDir,
+      distDir: process.cwd(),
+      params,
+    }),
+  ]);
 }
 
 async function installDependencies() {
-  await execa.shell('yarn add ava husky lint-staged nyc prettier standard-version --dev');
+  console.log('> yarn install ...');
+  await execa.shell(
+    'yarn add @commitlint/cli @commitlint/config-conventional ava husky lint-staged nyc prettier standard-version --dev'
+  );
 }
