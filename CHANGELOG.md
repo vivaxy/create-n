@@ -2,100 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-<a name="0.4.7-beta.10"></a>
-## [0.4.7-beta.10](https://github.com/vivaxy/create-n/compare/v0.4.7-beta.9...v0.4.7-beta.10) (2019-05-08)
+<a name="0.4.7"></a>
+## [0.4.7](https://github.com/vivaxy/create-n/compare/v0.4.7-beta.10...v0.4.7) (2019-05-08)
 
 
 
-<a name="0.4.7-beta.9"></a>
-## [0.4.7-beta.9](https://github.com/vivaxy/create-n/compare/v0.4.7-beta.8...v0.4.7-beta.9) (2019-05-08)
-
-
-
-<a name="0.4.7-beta.8"></a>
-## [0.4.7-beta.8](https://github.com/vivaxy/create-n/compare/v0.4.7-beta.7...v0.4.7-beta.8) (2019-05-08)
-
-
-
-<a name="0.4.7-beta.7"></a>
-## [0.4.7-beta.7](https://github.com/vivaxy/create-n/compare/v0.4.7-beta.6...v0.4.7-beta.7) (2019-05-08)
-
-
-
-<a name="0.4.7-beta.6"></a>
-## [0.4.7-beta.6](https://github.com/vivaxy/create-n/compare/v0.4.7-beta.5...v0.4.7-beta.6) (2019-05-08)
-
-
-
-<a name="0.4.7-beta.5"></a>
-## [0.4.7-beta.5](https://github.com/vivaxy/create-n/compare/v0.4.7-beta.4...v0.4.7-beta.5) (2019-05-08)
-
-
-
-<a name="0.4.7-beta.4"></a>
-## [0.4.7-beta.4](https://github.com/vivaxy/create-n/compare/v0.4.7-beta.3...v0.4.7-beta.4) (2019-05-08)
-
-
-
-<a name="0.4.7-beta.3"></a>
-## [0.4.7-beta.3](https://github.com/vivaxy/create-n/compare/v0.4.7-beta.2...v0.4.7-beta.3) (2019-05-08)
-
-
-
-<a name="0.4.7-beta.2"></a>
-## [0.4.7-beta.2](https://github.com/vivaxy/create-n/compare/v0.4.7-beta.1...v0.4.7-beta.2) (2019-05-08)
-
-
-
-<a name="0.4.7-beta.1"></a>
-## [0.4.7-beta.1](https://github.com/vivaxy/create-n/compare/v0.4.7-beta.0...v0.4.7-beta.1) (2019-05-08)
-
-
-
-<a name="0.4.7-beta.0"></a>
-## [0.4.7-beta.0](https://github.com/vivaxy/create-n/compare/v0.4.6...v0.4.7-beta.0) (2019-05-08)
-
-
-
-<a name="0.4.6"></a>
+<a name="0.4.7"></a>
 ## [0.4.6](https://github.com/vivaxy/create-n/compare/v0.4.5...v0.4.6) (2019-05-08)
 
 
 ### Bug Fixes
 
 * **template:** :bug:Fix template ignored files ([94f935c](https://github.com/vivaxy/create-n/commit/94f935c))
-
-
-
-<a name="0.4.5"></a>
-## [0.4.5](https://github.com/vivaxy/create-n/compare/v0.4.4...v0.4.5) (2019-05-08)
-
-
-### Bug Fixes
-
-* **template:** :bug:Fix template .gitignore ([9593cea](https://github.com/vivaxy/create-n/commit/9593cea))
-
-
-
-<a name="0.4.4"></a>
-## [0.4.4](https://github.com/vivaxy/create-n/compare/v0.4.3...v0.4.4) (2019-05-08)
-
-
-### Bug Fixes
-
-* **template:** :bug:Fix missing .gitignore ([94f3610](https://github.com/vivaxy/create-n/commit/94f3610))
-
-
-
-<a name="0.4.3"></a>
-## [0.4.3](https://github.com/vivaxy/create-n/compare/v0.4.2...v0.4.3) (2019-05-04)
-
-
-### Bug Fixes
-
-* :bug:fix missing commitlint.config.js ([e0a2f6e](https://github.com/vivaxy/create-n/commit/e0a2f6e))
-* **template:** :bug:Fix template files ([ad71071](https://github.com/vivaxy/create-n/commit/ad71071))
-
 
 
 <a name="0.4.2"></a>
