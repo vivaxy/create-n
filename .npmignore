@@ -7,3 +7,4 @@ coverage.lcov
 coverage
 **/__tests__/**
 !/template/**
+!/template/.gitignore
