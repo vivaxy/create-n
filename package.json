@@ -1,6 +1,6 @@
 {
   "name": "create-n",
-  "version": "0.4.7-beta.7",
+  "version": "0.4.7-beta.8",
   "description": "Create Npm Package",
   "bin": {
     "create-n": "./index.js"
@@ -49,8 +49,5 @@
       "pre-commit": "lint-staged",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
-  },
-  "files": [
-    "template/**/*"
-  ]
+  }
 }
