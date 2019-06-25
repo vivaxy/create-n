@@ -1,6 +1,6 @@
 {
   "name": "create-n",
-  "version": "0.4.7",
+  "version": "0.4.8",
   "description": "Create Npm Package",
   "bin": {
     "create-n": "./index.js"
