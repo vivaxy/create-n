@@ -21,7 +21,22 @@ const createFiles = require('./lib/template/create-files.js');
   await checkDir();
   const params = await getParams();
   await generateFiles(params);
-  await installDependencies();
+  const dependencies = [];
+  const devDependencies = [
+    // commit
+    'husky',
+    'lint-staged',
+    '@commitlint/cli',
+    '@commitlint/config-conventional',
+    'prettier',
+    // test
+    'ava',
+    'nyc',
+    'ts-node',
+    // changelog
+    'standard-version',
+  ];
+  await installDependencies(dependencies, devDependencies);
   console.log('Create N success!');
   process.exit(0);
 })().catch((ex) => {
@@ -115,23 +130,12 @@ async function generateFiles(params) {
   ]);
 }
 
-async function installDependencies() {
+async function installDependencies(dependencies, devDependencies) {
   console.log('> yarn install ...');
-  const dependencies = [];
-  const devDependencies = [
-    // commit
-    'husky',
-    'lint-staged',
-    '@commitlint/cli',
-    '@commitlint/config-conventional',
-    'prettier',
-    // test
-    'ava',
-    'nyc',
-    'ts-node',
-    // changelog
-    'standard-version',
-  ];
-  await execa('yarn', ['add', ...dependencies]);
-  await execa('yarn', ['add', ...devDependencies, '--dev']);
+  if (dependencies.length) {
+    await execa('yarn', ['add', ...dependencies]);
+  }
+  if (devDependencies.length) {
+    await execa('yarn', ['add', ...devDependencies, '--dev']);
+  }
 }
