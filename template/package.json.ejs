@@ -4,8 +4,9 @@
   "description": "Created by create-n",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
     "test": "ava",
-    "coverage": "nyc npm run test && nyc report --reporter=html && nyc report --reporter=lcov > coverage.lcov",
+    "coverage": "nyc npm test && nyc report --reporter=html && nyc report --reporter=lcov > coverage.lcov",
     "release:beta": "npm run coverage && standard-version --prerelease beta && npm publish --tag beta && git push --follow-tags",
     "release": "npm run coverage && standard-version && npm publish && git push --follow-tags"
   },
