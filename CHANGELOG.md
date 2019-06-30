@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.5.5"></a>
+## [0.5.5](https://github.com/vivaxy/create-n/compare/v0.5.4...v0.5.5) (2019-06-30)
+
+
+### Bug Fixes
+
+* **template:** :bug: Fix missing dependency: typescript ([6f5f04e](https://github.com/vivaxy/create-n/commit/6f5f04e))
+
+
+
 <a name="0.5.4"></a>
 ## [0.5.4](https://github.com/vivaxy/create-n/compare/v0.5.3...v0.5.4) (2019-06-30)
 
