@@ -23,12 +23,16 @@ const createFiles = require('./lib/template/create-files.js');
   await generateFiles(params);
   const dependencies = [];
   const devDependencies = [
-    // commit
+    // commit hook
     'husky',
     'lint-staged',
+    // commit lint
     '@commitlint/cli',
     '@commitlint/config-conventional',
+    // code style
     'prettier',
+    // build
+    'typescript',
     // test
     'ava',
     'nyc',
@@ -65,7 +69,7 @@ async function checkDir() {
           console.log('Create cancelled.');
           process.exit(1);
         },
-      }
+      },
     );
     if (!override) {
       console.log('Create cancelled.');
@@ -89,7 +93,7 @@ async function getParams() {
         console.log('Create cancelled.');
         process.exit(1);
       },
-    }
+    },
   );
 
   const [username, gitRemoteURL, userEmail] = await Promise.all([
@@ -103,7 +107,7 @@ async function getParams() {
   }
 
   const { name: repoName, owner: repoOwner, source } = gitUrlParse(
-    gitRemoteURL
+    gitRemoteURL,
   );
   return {
     name,
