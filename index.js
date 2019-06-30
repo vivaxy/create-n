@@ -132,6 +132,6 @@ async function installDependencies() {
     // changelog
     'standard-version',
   ];
-  await execa('yarn', ...dependencies);
-  await execa('yarn', [...devDependencies, '--dev']);
+  await execa('yarn', ['add', ...dependencies]);
+  await execa('yarn', ['add', ...devDependencies, '--dev']);
 }
