@@ -20,7 +20,7 @@
   },
   "homepage": "https://<%= hostname %>/<%= username %>/<%= reponame %>#readme",
   "lint-staged": {
-    "**/**.{js,json,md}": [
+    "*": [
       "prettier --write",
       "git add"
     ]
@@ -30,5 +30,17 @@
       "pre-commit": "lint-staged",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "ava": {
+    "files": [
+      "src/**/__tests__/**/*.ts"
+    ],
+    "compileEnhancements": false,
+    "extensions": [
+      "ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ]
   }
 }

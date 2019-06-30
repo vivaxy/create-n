@@ -3,7 +3,7 @@
  * @author vivaxy
  */
 
-const test = require('ava');
+import test from 'ava';
 
 test((t) => {
   t.pass();

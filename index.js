@@ -114,7 +114,21 @@ async function generateFiles(params) {
 
 async function installDependencies() {
   console.log('> yarn install ...');
-  await execa.shell(
-    'yarn add @commitlint/cli @commitlint/config-conventional ava husky lint-staged nyc prettier standard-version --dev'
-  );
+  const dependencies = [];
+  const devDependencies = [
+    // commit
+    'husky',
+    'lint-staged',
+    '@commitlint/cli',
+    '@commitlint/config-conventional',
+    'prettier',
+    // test
+    'ava',
+    'nyc',
+    'ts-node',
+    // changelog
+    'standard-version',
+  ];
+  await execa('yarn', ...dependencies);
+  await execa('yarn', [...devDependencies, '--dev']);
 }
