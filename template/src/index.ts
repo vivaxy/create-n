@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 
-console.log('Create-n');
+export default 'Create-n';
