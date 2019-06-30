@@ -9,7 +9,9 @@ const path = require('path');
 const execa = require('execa');
 const fse = require('fs-extra');
 const prompts = require('prompts');
+const gitUrlParse = require('git-url-parse');
 const getRemoteURL = require('./lib/git/get-remote-url.js');
+const getUserName = require('./lib/git/get-user-name.js');
 const getUserEmail = require('./lib/git/get-user-email.js');
 const copyFiles = require('./lib/template/copy-files.js');
 const createFiles = require('./lib/template/create-files.js');
@@ -75,26 +77,27 @@ async function getParams() {
     }
   );
 
-  const [gitRemoteURL, userEmail] = await Promise.all([
-    getRemoteURL(),
+  const [username, gitRemoteURL, userEmail] = await Promise.all([
+    getUserName(),
+    getRemoteURL(), // => git@github.com:vivaxy/create-n.git
     getUserEmail(),
-  ]); // => git@github.com:vivaxy/create-n.git
+  ]);
   if (!gitRemoteURL) {
     console.log('Create failed with error git remote URL: ' + gitRemoteURL);
     process.exit(1);
   }
-  const [_git, hostname_username_reponame_] = gitRemoteURL.split('@'); // => github.com:vivaxy/create-n.git
-  const [hostname_username_reponame, _] = hostname_username_reponame_.split(
-    '.git'
-  ); // => github.com:vivaxy/create-n
-  const [hostname, username_reponame] = hostname_username_reponame.split(':'); // => github.com, vivaxy/create-n
-  const [username, reponame] = username_reponame.split('/'); // => vivaxy, create-n
+
+  const { name: repoName, owner: repoOwner, source } = gitUrlParse(
+    gitRemoteURL
+  );
   return {
     name,
     username,
-    reponame,
     userEmail,
-    hostname,
+    repoOwner,
+    repoName,
+    gitRemoteURL,
+    hostname: source,
     year: new Date().getFullYear(),
   };
 }

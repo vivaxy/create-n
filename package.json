@@ -1,6 +1,6 @@
 {
   "name": "create-n",
-  "version": "0.4.3",
+  "version": "0.4.9",
   "description": "Create Npm Package",
   "bin": {
     "create-n": "./index.js"
@@ -26,6 +26,7 @@
     "execa": "^0.10.0",
     "fast-glob": "^2.2.2",
     "fs-extra": "^6.0.1",
+    "git-url-parse": "^11.1.2",
     "prompts": "^0.1.8"
   },
   "devDependencies": {

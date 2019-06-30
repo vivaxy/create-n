@@ -5,5 +5,4 @@ node_modules
 .nyc_output
 coverage.lcov
 coverage
-**/__tests__/**
-!/template/__tests__/index.js
+/__tests__/**
