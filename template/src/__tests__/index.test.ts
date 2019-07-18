@@ -3,8 +3,6 @@
  * @author vivaxy
  */
 
-import test from 'ava';
-
-test((t) => {
-  t.pass();
+test('test', function() {
+  expect(true).toBe(true);
 });

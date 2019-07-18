@@ -34,9 +34,9 @@ const createFiles = require('./lib/template/create-files.js');
     // build
     'typescript',
     // test
-    'ava',
-    'nyc',
-    'ts-node',
+    'jest',
+    '@types/jest',
+    'ts-jest',
     // changelog
     'standard-version',
   ];

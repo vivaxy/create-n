@@ -5,8 +5,8 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "tsc",
-    "test": "ava",
-    "coverage": "nyc npm test && nyc report --reporter=html && nyc report --reporter=lcov > coverage.lcov",
+    "test": "jest",
+    "coverage": "jest --collect-coverage",
     "release:beta": "npm run test && npm run build && standard-version --prerelease beta && npm publish --tag beta && git push --follow-tags",
     "release": "npm run test && npm run build && standard-version && npm publish && git push --follow-tags"
   },
@@ -32,16 +32,10 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
-  "ava": {
-    "files": [
-      "src/**/__tests__/**/*.ts"
-    ],
-    "compileEnhancements": false,
-    "extensions": [
-      "ts"
-    ],
-    "require": [
-      "ts-node/register"
+  "jest": {
+    "preset": "ts-jest",
+    "collectCoverageFrom": [
+      "src/**/*.ts"
     ]
   }
 }
