@@ -9,6 +9,7 @@ const path = require('path');
 const execa = require('execa');
 const fse = require('fs-extra');
 const prompts = require('prompts');
+const logSymbols = require('log-symbols');
 const gitUrlParse = require('git-url-parse');
 const getRemoteURL = require('./lib/git/get-remote-url.js');
 const getUserName = require('./lib/git/get-user-name.js');
@@ -122,7 +123,7 @@ async function getParams() {
 }
 
 async function generateFiles(params) {
-  console.log('> create files ...');
+  console.log(logSymbols.info, 'create files ...');
   const srcDir = path.join(__dirname, 'template');
   await Promise.all([
     copyFiles({ srcDir, distDir: process.cwd() }),
@@ -135,11 +136,13 @@ async function generateFiles(params) {
 }
 
 async function installDependencies(dependencies, devDependencies) {
-  console.log('> yarn install ...');
+  console.log(logSymbols.info, 'yarn install ...');
   if (dependencies.length) {
-    await execa('yarn', ['add', ...dependencies]);
+    await execa('yarn', ['add', ...dependencies], { stdio: 'inherit' });
   }
   if (devDependencies.length) {
-    await execa('yarn', ['add', ...devDependencies, '--dev']);
+    await execa('yarn', ['add', ...devDependencies, '--dev'], {
+      stdio: 'inherit',
+    });
   }
 }
