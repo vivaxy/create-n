@@ -1,6 +1,6 @@
 # create-n
 
-Create Npm Package by `npm init n` or `npx create-n`
+Create NPM Package by `yarn create n`, `npm init n` or `npx create-n`.
 
 [![Build Status][travis-image]][travis-url]
 [![NPM Version][npm-version-image]][npm-url]
