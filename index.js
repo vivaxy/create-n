@@ -11,16 +11,19 @@ const fse = require('fs-extra');
 const prompts = require('prompts');
 const logSymbols = require('log-symbols');
 const gitUrlParse = require('git-url-parse');
-const getRemoteURL = require('./lib/git/get-remote-url.js');
-const getUserName = require('./lib/git/get-user-name.js');
-const getUserEmail = require('./lib/git/get-user-email.js');
+const {
+  getCurrentRemoteUrl,
+  getUserName,
+  getUserEmail,
+} = require('@vivaxy/git');
 const copyFiles = require('./lib/template/copy-files.js');
 const createFiles = require('./lib/template/create-files.js');
 
 (async () => {
+  const cwd = process.cwd();
   logInfo();
-  await checkDir();
-  const params = await getParams();
+  await checkDir({ cwd });
+  const params = await getParams({ cwd });
   await generateFiles(params);
   const dependencies = [];
   const devDependencies = [
@@ -53,8 +56,8 @@ function logInfo() {
   console.log('Create-n version: ' + require('./package.json').version);
 }
 
-async function checkDir() {
-  const files = await fse.readdir(process.cwd());
+async function checkDir({ cwd }) {
+  const files = await fse.readdir(cwd);
   if (files.length !== 0) {
     const { override } = await prompts(
       [
@@ -79,7 +82,7 @@ async function checkDir() {
   }
 }
 
-async function getParams() {
+async function getParams({ cwd }) {
   const { name } = await prompts(
     [
       {
@@ -98,9 +101,9 @@ async function getParams() {
   );
 
   const [username, gitRemoteURL, userEmail] = await Promise.all([
-    getUserName(),
-    getRemoteURL(), // => git@github.com:vivaxy/create-n.git
-    getUserEmail(),
+    getUserName({ cwd }),
+    getCurrentRemoteUrl({ cwd }), // => git@github.com:vivaxy/create-n.git
+    getUserEmail({ cwd }),
   ]);
   if (!gitRemoteURL) {
     console.log('Create failed with error git remote URL: ' + gitRemoteURL);
