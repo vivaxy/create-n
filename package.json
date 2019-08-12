@@ -2,6 +2,10 @@
   "name": "create-n",
   "version": "0.6.1",
   "description": "Create Npm Package",
+  "keywords": [
+    "vivaxy",
+    "create-n"
+  ],
   "bin": {
     "create-n": "./index.js"
   },
