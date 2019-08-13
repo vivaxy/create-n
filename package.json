@@ -66,5 +66,10 @@
       "/node_modules/",
       "/template/src"
     ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   }
 }
