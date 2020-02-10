@@ -4,7 +4,6 @@
  * @since 20180510 14:02
  * @author vivaxy
  */
-
 const path = require('path');
 const execa = require('execa');
 const fse = require('fs-extra');
