@@ -63,7 +63,8 @@
     ],
     "testPathIgnorePatterns": [
       "/node_modules/",
-      "/template/src"
+      "/template/src",
+      "/lib/template/__tests__/working-directories/"
     ]
   },
   "commitlint": {

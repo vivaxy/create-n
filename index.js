@@ -112,6 +112,8 @@ async function getParams({ cwd }) {
   const { name: repoName, owner: repoOwner, source } = gitUrlParse(
     gitRemoteURL,
   );
+  const nowDate = new Date();
+  const year = nowDate.getFullYear();
   return {
     name,
     username,
@@ -120,7 +122,9 @@ async function getParams({ cwd }) {
     repoName,
     gitRemoteURL,
     hostname: source,
-    year: new Date().getFullYear(),
+    year,
+    fileHeadersTime: `${year}-${nowDate.getMonth() +
+      1}-${nowDate.getDate()} ${nowDate.getHours()}:${nowDate.getMinutes()}:${nowDate.getSeconds()}`,
   };
 }
 
