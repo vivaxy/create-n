@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.5](https://github.com/vivaxy/create-n/compare/v0.6.4...v0.6.5) (2020-03-07)
+
+
+### Features
+
+* :sparkles:  support scoped packages on npm ([fc6ad5f](https://github.com/vivaxy/create-n/commit/fc6ad5f3dcfc77d4194a8ab762cbf30c54599c21))
+
 ### [0.6.4](https://github.com/vivaxy/create-n/compare/v0.6.3...v0.6.4) (2020-02-25)
 
 
