@@ -13,8 +13,8 @@
     "build": "tsc",
     "test": "jest",
     "coverage": "jest --collect-coverage",
-    "release:beta": "npm run test && npm run build && standard-version --prerelease beta && npm publish --tag beta && git push --follow-tags",
-    "release": "npm run test && npm run build && standard-version && npm publish && git push --follow-tags"
+    "release:beta": "npm run test && npm run build && standard-version --prerelease beta && npm publish --tag beta --access=public && git push --follow-tags",
+    "release": "npm run test && npm run build && standard-version && npm publish --access=public && git push --follow-tags"
   },
   "repository": {
     "type": "git",
