@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.6](https://github.com/vivaxy/create-n/compare/v0.6.5...v0.6.6) (2020-03-08)
+
+
+### Features
+
+* :sparkles:  pad with 0 before date string ([dd0d020](https://github.com/vivaxy/create-n/commit/dd0d020d289f627efea2c355e3e54492bb8342a0))
+
 ### [0.6.5](https://github.com/vivaxy/create-n/compare/v0.6.4...v0.6.5) (2020-03-07)
 
 
