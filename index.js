@@ -18,6 +18,15 @@ const {
 const copyFiles = require('./lib/template/copy-files.js');
 const createFiles = require('./lib/template/create-files.js');
 
+function padLeft(value, length = 2, padding = '0') {
+  if (typeof value !== 'string') {
+    value = String(value);
+  }
+  while (value.length < length) {
+    value = `${padding}${value}`;
+  }
+  return value;
+}
 (async () => {
   const cwd = process.cwd();
   logInfo();
@@ -123,8 +132,11 @@ async function getParams({ cwd }) {
     gitRemoteURL,
     hostname: source,
     year,
-    fileHeadersTime: `${year}-${nowDate.getMonth() +
-      1}-${nowDate.getDate()} ${nowDate.getHours()}:${nowDate.getMinutes()}:${nowDate.getSeconds()}`,
+    fileHeadersTime: `${year}-${padLeft(nowDate.getMonth() + 1)}-${padLeft(
+      nowDate.getDate(),
+    )} ${padLeft(nowDate.getHours())}:${padLeft(
+      nowDate.getMinutes(),
+    )}:${padLeft(nowDate.getSeconds())}`,
   };
 }
 
