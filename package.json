@@ -36,13 +36,13 @@
     "prompts": "^0.1.8"
   },
   "devDependencies": {
-    "@commitlint/cli": "^7.5.2",
-    "@commitlint/config-conventional": "^7.5.0",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "husky": "^1.1.1",
     "jest": "^25.1.0",
     "lint-staged": "^9.5.0",
     "prettier": "^1.14.2",
-    "standard-version": "^7.0.1"
+    "standard-version": "^7.1.0"
   },
   "lint-staged": {
     "*.{js,ts,css,less,json,md,html,yml,yaml,pcss,jsx,tsx}": [
