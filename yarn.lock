@@ -605,10 +605,10 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@vivaxy/git@^0.1.7":
-  version "0.1.7"
-  resolved "https://registry.npmjs.org/@vivaxy/git/-/git-0.1.7.tgz#167f2e11c56d4b7f3590a60ef08d0a09ce6a338f"
-  integrity sha512-OjIzd8AdIvKzpsY54NBR0Eixg8CT+Nl4F7cLXkAm3Di97CH+gIx8HgaomCGVAsV6HYOhHdjCzR8HKP2FQ86Bhw==
+"@vivaxy/git@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.npmjs.org/@vivaxy/git/-/git-0.2.0.tgz#1d5f00bf85a80dd6156a28bb3cf89fdf207273c9"
+  integrity sha512-YSraT22lou0Em1xl8DWBTx7kCzgVHERhggudj5aSLvspAxoT2A6ULsu23bvOjz9vAcNjhHwYA36spPnVLDC0QQ==
   dependencies:
     "@types/fs-extra" "^8.0.0"
     execa "^2.0.3"
