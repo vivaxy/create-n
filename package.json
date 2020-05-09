@@ -38,7 +38,7 @@
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
-    "husky": "^1.1.1",
+    "husky": "^4.0.0",
     "jest": "^25.1.0",
     "lint-staged": "^9.5.0",
     "prettier": "^1.14.2",
