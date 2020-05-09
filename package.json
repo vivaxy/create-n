@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/vivaxy/create-n#readme",
   "dependencies": {
-    "@vivaxy/git": "^0.2.0",
+    "@vivaxy/git": "^4.0.0",
     "ejs": "^3.0.0",
     "execa": "^0.10.0",
     "fast-glob": "^3.1.1",
