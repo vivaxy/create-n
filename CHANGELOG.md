@@ -1,41 +1,21 @@
-# Changelog
+# Change Log
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [0.6.7](https://github.com/vivaxy/create-n/compare/v0.6.5...v0.6.7) (2020-03-15)
+<a name="0.7.0"></a>
+# [0.7.0](https://github.com/vivaxy/create-n/compare/v0.6.7...v0.7.0) (2020-05-21)
+
+
+### Bug Fixes
+
+* :bug:  fix html script using double quotes ([0091977](https://github.com/vivaxy/create-n/commit/0091977))
 
 
 ### Features
 
-* :sparkles:  pad with 0 before date string ([dd0d020](https://github.com/vivaxy/create-n/commit/dd0d020d289f627efea2c355e3e54492bb8342a0))
-* :sparkles:  support browser env ([e3aacdd](https://github.com/vivaxy/create-n/commit/e3aacddb1943e393673978f81c28f49b8cf11a4b))
-
-### [0.6.6](https://github.com/vivaxy/create-n/compare/v0.6.5...v0.6.6) (2020-03-15)
+* :sparkles: add .vscode debug config ([c77c901](https://github.com/vivaxy/create-n/commit/c77c901))
 
 
-### Features
-
-* :sparkles:  pad with 0 before date string ([dd0d020](https://github.com/vivaxy/create-n/commit/dd0d020d289f627efea2c355e3e54492bb8342a0))
-* :sparkles:  support browser env ([e3aacdd](https://github.com/vivaxy/create-n/commit/e3aacddb1943e393673978f81c28f49b8cf11a4b))
-
-### [0.6.5](https://github.com/vivaxy/create-n/compare/v0.6.4...v0.6.5) (2020-03-07)
-
-
-### Features
-
-* :sparkles:  support scoped packages on npm ([fc6ad5f](https://github.com/vivaxy/create-n/commit/fc6ad5f3dcfc77d4194a8ab762cbf30c54599c21))
-
-### [0.6.4](https://github.com/vivaxy/create-n/compare/v0.6.3...v0.6.4) (2020-02-25)
-
-
-### Features
-
-* :sparkles:  support file headers with dynamic time and username ([b2d13ea](https://github.com/vivaxy/create-n/commit/b2d13ea25b26d5b59bedfb7cdfb2940aa1887509))
-* **test:** :sparkles: ignore coverage collect from `__tests__/**/*.ts` ([3644a93](https://github.com/vivaxy/create-n/commit/3644a930c180fa2b4844cc1ba63f391ad1bfa1cd))
-
-### [0.6.3](https://github.com/vivaxy/create-n/compare/v0.6.1...v0.6.3) (2019-12-28)
-
-### [0.6.2](https://github.com/vivaxy/create-n/compare/v0.6.1...v0.6.2) (2019-12-28)
 
 <a name="0.6.1"></a>
 ## [0.6.1](https://github.com/vivaxy/create-n/compare/v0.6.0...v0.6.1) (2019-07-27)
