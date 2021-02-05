@@ -3,8 +3,7 @@
 [![Build Status][travis-image]][travis-url]
 [![NPM Version][npm-version-image]][npm-url]
 [![NPM Downloads][npm-downloads-image]][npm-url]
-<% if (license === 'gpl') { %>[![GPL License][license-image]][license-url]<% } %>
-<% if (license === 'mit') { %>[![MIT License][mit-license-image]][mit-license-url]<% } %>
+[![<%= license.toUpperCase() %> License][license-image]][license-url]
 [![Standard Version][standard-version-image]][standard-version-url]
 [![Codecov][codecov-image]][codecov-url]
 
@@ -28,7 +27,7 @@ _Project created by [create-n](https://github.com/vivaxy/create-n)._
 [npm-url]: https://www.npmjs.com/package/<%= name %>
 [npm-downloads-image]: https://img.shields.io/npm/dt/<%= name %>.svg?style=flat-square
 [license-image]: https://img.shields.io/npm/l/<%= name %>.svg?style=flat-square
-[license-url]: LICENSE
+[license-url]: <% if (license === 'gpl') { %>COPYING<% } else { %>LICENSE<% } %>
 [standard-version-image]: https://img.shields.io/badge/release-standard%20version-brightgreen.svg?style=flat-square
 [standard-version-url]: https://github.com/conventional-changelog/standard-version
 [codecov-image]: https://img.shields.io/codecov/c/github/<%= repoOwner %>/<%= repoName %>.svg?style=flat-square

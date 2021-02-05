@@ -96,14 +96,13 @@ async function getParams({ cwd }) {
       {
         type: 'text',
         name: 'name',
-        message: 'package name',
+        message: 'Enter package name',
         initial: path.basename(process.cwd()),
       },
       {
         type: 'select',
         name: 'license',
-        message: 'select a license',
-        initial: 'gpl',
+        message: 'Select a license',
         choices: [
           {
             title: 'GNU GPLv3',
@@ -153,6 +152,7 @@ async function getParams({ cwd }) {
     )} ${padLeft(nowDate.getHours())}:${padLeft(
       nowDate.getMinutes(),
     )}:${padLeft(nowDate.getSeconds())}`,
+    license,
   };
 }
 
