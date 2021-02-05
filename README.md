@@ -17,6 +17,7 @@ Create npm Package by `yarn create n`, `npm init n` or `npx create-n`.
 - Standard Version with Commit Lint
 - Code Style: Prettier + Editor Config
 - Readme Badges
+- GPL/MIT Licenses
 
 [travis-image]: https://img.shields.io/travis/vivaxy/create-n.svg?style=flat-square
 [travis-url]: https://travis-ci.org/vivaxy/create-n

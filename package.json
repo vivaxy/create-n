@@ -64,7 +64,8 @@
     "testPathIgnorePatterns": [
       "/node_modules/",
       "/template/src",
-      "/lib/template/__tests__/working-directories/"
+      "/lib/template/__tests__/working-directories/",
+      "/__tests__/fixtures/"
     ]
   },
   "commitlint": {
