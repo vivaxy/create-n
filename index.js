@@ -91,7 +91,7 @@ async function checkDir({ cwd }) {
 }
 
 async function getParams({ cwd }) {
-  const { name } = await prompts(
+  const { name, license } = await prompts(
     [
       {
         type: 'text',
@@ -99,9 +99,25 @@ async function getParams({ cwd }) {
         message: 'package name',
         initial: path.basename(process.cwd()),
       },
+      {
+        type: 'select',
+        name: 'license',
+        message: 'select a license',
+        initial: 'gpl',
+        choices: [
+          {
+            title: 'GNU GPLv3',
+            value: 'gpl',
+          },
+          {
+            title: 'MIT License',
+            value: 'mit',
+          },
+        ],
+      },
     ],
     {
-      onCancel: () => {
+      onCancel() {
         console.log('Create cancelled.');
         process.exit(1);
       },
@@ -144,7 +160,7 @@ async function generateFiles(params) {
   console.log(logSymbols.info, 'create files ...');
   const srcDir = path.join(__dirname, 'template');
   await Promise.all([
-    copyFiles({ srcDir, distDir: process.cwd() }),
+    copyFiles({ srcDir, distDir: process.cwd(), params }),
     createFiles({
       srcDir,
       distDir: process.cwd(),
