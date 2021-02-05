@@ -1,6 +1,18 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [0.7.1](https://github.com/vivaxy/create-n/compare/v0.7.0...v0.7.1) (2021-02-05)
+
+
+### Features
+
+* :sparkles: support gpl license ([3d4cf91](https://github.com/vivaxy/create-n/commit/3d4cf91d4066b3b63e28c90ac9b53bf307bbf1dd))
+
+
+### Bug Fixes
+
+* **deps:** update dependency execa to v5 ([bb6dfc0](https://github.com/vivaxy/create-n/commit/bb6dfc05945755d27e4c7b1200ab8252ee66eb7f))
 
 <a name="0.7.0"></a>
 # [0.7.0](https://github.com/vivaxy/create-n/compare/v0.6.7...v0.7.0) (2020-05-21)
