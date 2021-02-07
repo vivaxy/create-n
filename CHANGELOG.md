@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/vivaxy/create-n/compare/v0.7.1...v1.0.0) (2021-02-07)
+
+
+### Bug Fixes
+
+* :bug: fix package.json license when gpl license ([c53c49c](https://github.com/vivaxy/create-n/commit/c53c49cd603211612f9e18ac2ac3f0fd77822192))
+
 ### [0.7.1](https://github.com/vivaxy/create-n/compare/v0.7.0...v0.7.1) (2021-02-05)
 
 
