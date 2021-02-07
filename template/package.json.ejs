@@ -22,7 +22,7 @@
     "url": "git+https://<%= hostname %>/<%= username %>/<%= repoName %>.git"
   },
   "author": "<%= username %> <<%= userEmail %>>",
-  "license": "MIT",
+  "license": "<% if (license === 'gpl') { %>GPL-3.0-or-later<% } else { %>MIT<% } %>",
   "bugs": {
     "url": "https://<%= hostname %>/<%= username %>/<%= repoName %>/issues"
   },
