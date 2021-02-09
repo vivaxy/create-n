@@ -15,7 +15,10 @@
     "test": "jest",
     "coverage": "jest --collect-coverage",
     "release:beta": "npm run test && npm run build && standard-version --prerelease beta && npm publish --tag beta --access=public && git push --follow-tags",
-    "release": "npm run test && npm run build && standard-version && npm publish --access=public && git push --follow-tags"
+    "release": "npm run test && npm run build && standard-version && npm publish --access=public && git push --follow-tags",
+    "postinstall": "husky install",
+    "prepublishOnly": "pinst --disable",
+    "postpublish": "pinst --enable"
   },
   "repository": {
     "type": "git",
@@ -31,12 +34,6 @@
     "*.{js,ts,css,less,json,md,html,yml,yaml,pcss,jsx,tsx}": [
       "prettier --write"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
   },
   "jest": {
     "testEnvironment": "node",

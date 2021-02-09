@@ -37,6 +37,7 @@ function padLeft(value, length = 2, padding = '0') {
   const devDependencies = [
     // commit hook
     'husky',
+    'pinst',
     'lint-staged',
     // commit lint
     '@commitlint/cli',
