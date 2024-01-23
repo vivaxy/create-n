@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.2](https://github.com/vivaxy/create-n/compare/v1.1.1...v1.1.2) (2024-01-23)
+
+
+### Bug Fixes
+
+* fix typo ([7cd972c](https://github.com/vivaxy/create-n/commit/7cd972cd7c6235dd599b810bc0b431eaf5d34f5a))
+* use esm on jest coverage ([02675a1](https://github.com/vivaxy/create-n/commit/02675a1a9e4e6fbdb81e13b49cd85cf7200c85e1))
+
 ### [1.1.1](https://github.com/vivaxy/create-n/compare/v1.1.0...v1.1.1) (2024-01-23)
 
 
