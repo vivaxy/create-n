@@ -1,22 +1,21 @@
 #!/usr/bin/env node
-
 /**
  * @since 20180510 14:02
  * @author vivaxy
  */
-const path = require('path');
-const execa = require('execa');
-const fse = require('fs-extra');
-const prompts = require('prompts');
-const logSymbols = require('log-symbols');
-const gitUrlParse = require('git-url-parse');
-const {
-  getCurrentRemoteUrl,
-  getUserName,
-  getUserEmail,
-} = require('@vivaxy/git');
-const copyFiles = require('./lib/template/copy-files.js');
-const createFiles = require('./lib/template/create-files.js');
+import path from 'path';
+import execa from 'execa';
+import fse from 'fs-extra';
+import prompts from 'prompts';
+import logSymbols from 'log-symbols';
+import gitUrlParse from 'git-url-parse';
+import { getCurrentRemoteUrl, getUserName, getUserEmail } from '@vivaxy/git';
+import { copyFiles } from './lib/template/copy-files.js';
+import { createFiles } from './lib/template/create-files.js';
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
+const pkg = require('./package.json');
 
 function padLeft(value, length = 2, padding = '0') {
   if (typeof value !== 'string') {
@@ -27,6 +26,7 @@ function padLeft(value, length = 2, padding = '0') {
   }
   return value;
 }
+
 (async () => {
   const cwd = process.cwd();
   logInfo();
@@ -61,7 +61,7 @@ function padLeft(value, length = 2, padding = '0') {
 });
 
 function logInfo() {
-  console.log('Create-n version: ' + require('./package.json').version);
+  console.log('Create-n version: ' + pkg.version);
 }
 
 async function checkDir({ cwd }) {
