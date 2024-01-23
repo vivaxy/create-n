@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/vivaxy/create-n/compare/v1.1.0...v1.1.1) (2024-01-23)
+
+
+### Bug Fixes
+
+* `Error [ERR_REQUIRE_ESM]: require() of ES Module log-symbols from create-n not supported.` ([7f9477b](https://github.com/vivaxy/create-n/commit/7f9477bcab586c3cdb9693a549f6e1fc093b6946))
+
 ## [1.1.0](https://github.com/vivaxy/create-n/compare/v1.0.1...v1.1.0) (2024-01-23)
 
 
