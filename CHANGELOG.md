@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/vivaxy/create-n/compare/v1.0.1...v1.1.0) (2024-01-23)
+
+
+### Features
+
+* switch from yarn to npm ([7687547](https://github.com/vivaxy/create-n/commit/7687547e9c03b49620f9d8227da331199a3b4a9a))
+
+
+### Bug Fixes
+
+* `husky: command not found` ([6bf5d09](https://github.com/vivaxy/create-n/commit/6bf5d099cf9f898faf49257dc3d472dabe220d3b))
+
 ### [1.0.1](https://github.com/vivaxy/create-n/compare/v1.0.0...v1.0.1) (2024-01-23)
 
 
