@@ -3,18 +3,20 @@
  * @since 20180510 14:02
  * @author vivaxy
  */
+import url from 'url';
 import path from 'path';
 import execa from 'execa';
 import fse from 'fs-extra';
 import prompts from 'prompts';
 import logSymbols from 'log-symbols';
+import { createRequire } from 'module';
 import gitUrlParse from 'git-url-parse';
 import { getCurrentRemoteUrl, getUserName, getUserEmail } from '@vivaxy/git';
 import { copyFiles } from './lib/template/copy-files.js';
 import { createFiles } from './lib/template/create-files.js';
-import { createRequire } from 'module';
 
 const require = createRequire(import.meta.url);
+const dirname = path.dirname(url.fileURLToPath(import.meta.url));
 const pkg = require('./package.json');
 
 function padLeft(value, length = 2, padding = '0') {
@@ -160,7 +162,7 @@ async function getParams({ cwd }) {
 
 async function generateFiles(params) {
   console.log(logSymbols.info, 'create files ...');
-  const srcDir = path.join(__dirname, 'template');
+  const srcDir = path.join(dirname, 'template');
   await Promise.all([
     copyFiles({ srcDir, distDir: process.cwd(), params }),
     createFiles({
