@@ -14,7 +14,7 @@
   "scripts": {
     "build": "tsc && tsc -p tsconfig-browser.json",
     "test": "NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\" jest",
-    "coverage": "jest --collect-coverage",
+    "coverage": "NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\" jest --collect-coverage",
     "release:beta": "npm run test && npm run build && standard-version --prerelease beta && npm publish --tag beta --access=public && git push --follow-tags",
     "release": "npm run test && npm run build && standard-version && npm publish --access=public && git push --follow-tags",
     "prepare": "husky install"

@@ -13,7 +13,7 @@
   },
   "scripts": {
     "test": "NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\" jest",
-    "coverage": "jest --collect-coverage",
+    "coverage": "NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules\" jest --collect-coverage",
     "release:beta": "npm test && standard-version --prerelease beta && npm publish --tag beta && git push --tags",
     "release": "npm test && standard-version && npm publish && git push --tags",
     "prepare": "husky install"
