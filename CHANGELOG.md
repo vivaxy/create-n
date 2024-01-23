@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/vivaxy/create-n/compare/v1.0.0...v1.0.1) (2024-01-23)
+
+
+### Bug Fixes
+
+* **deps:** update dependency fs-extra to v10 ([395f274](https://github.com/vivaxy/create-n/commit/395f274642aae69b25d9368a188803949d8e550b))
+* **deps:** update dependency log-symbols to v5 ([bd2ac38](https://github.com/vivaxy/create-n/commit/bd2ac381921dcf6977338bdb43ea66a9ab387d86))
+
 ## [1.0.0](https://github.com/vivaxy/create-n/compare/v0.7.1...v1.0.0) (2021-02-07)
 
 
