@@ -16,9 +16,7 @@
     "coverage": "jest --collect-coverage",
     "release:beta": "npm run test && npm run build && standard-version --prerelease beta && npm publish --tag beta --access=public && git push --follow-tags",
     "release": "npm run test && npm run build && standard-version && npm publish --access=public && git push --follow-tags",
-    "postinstall": "husky install",
-    "prepublishOnly": "pinst --disable",
-    "postpublish": "pinst --enable"
+    "postinstall": "husky install"
   },
   "repository": {
     "type": "git",
@@ -30,11 +28,6 @@
     "url": "https://<%= hostname %>/<%= username %>/<%= repoName %>/issues"
   },
   "homepage": "https://<%= hostname %>/<%= username %>/<%= repoName %>#readme",
-  "lint-staged": {
-    "*.{js,ts,css,less,json,md,html,yml,yaml,pcss,jsx,tsx}": [
-      "prettier --write"
-    ]
-  },
   "jest": {
     "testEnvironment": "node",
     "preset": "ts-jest",
@@ -50,5 +43,9 @@
     "extends": [
       "@commitlint/config-conventional"
     ]
+  },
+  "packageManager": "npm@8.19.4",
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   }
 }

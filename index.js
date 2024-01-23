@@ -37,7 +37,6 @@ function padLeft(value, length = 2, padding = '0') {
   const devDependencies = [
     // commit hook
     'husky',
-    'pinst',
     'lint-staged',
     // commit lint
     '@commitlint/cli',
@@ -134,9 +133,11 @@ async function getParams({ cwd }) {
     process.exit(1);
   }
 
-  const { name: repoName, owner: repoOwner, source } = gitUrlParse(
-    gitRemoteURL,
-  );
+  const {
+    name: repoName,
+    owner: repoOwner,
+    source,
+  } = gitUrlParse(gitRemoteURL);
   const nowDate = new Date();
   const year = nowDate.getFullYear();
   return {
@@ -171,12 +172,14 @@ async function generateFiles(params) {
 }
 
 async function installDependencies(dependencies, devDependencies) {
-  console.log(logSymbols.info, 'yarn install ...');
+  console.log(logSymbols.info, 'npm install ...');
   if (dependencies.length) {
-    await execa('yarn', ['add', ...dependencies], { stdio: 'inherit' });
+    await execa('npm', ['install', ...dependencies, '--save'], {
+      stdio: 'inherit',
+    });
   }
   if (devDependencies.length) {
-    await execa('yarn', ['add', ...devDependencies, '--dev'], {
+    await execa('npm', ['install', ...devDependencies, '--save-dev'], {
       stdio: 'inherit',
     });
   }
