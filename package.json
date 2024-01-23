@@ -14,7 +14,6 @@
     "coverage": "jest --collect-coverage",
     "release:beta": "npm test && standard-version --prerelease beta && npm publish --tag beta && git push --tags",
     "release": "npm test && standard-version && npm publish && git push --tags",
-    "postinstall": "husky install",
     "prepare": "husky install"
   },
   "repository": {
